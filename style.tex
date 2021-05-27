@@ -1,0 +1,411 @@
+
+%packages
+\newcommand\hmmax{0}
+\newcommand\bmmax{0}
+
+\usepackage{stix} % geometric shapes
+\usepackage[english]{babel} 
+\usepackage{amsmath,amsfonts,amsthm,amscd}
+\usepackage{ascmac}
+\usepackage{appendix}
+\usepackage{bm}
+\usepackage{cases}
+\usepackage{changepage} 
+\usepackage{enumitem}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage [autostyle, english = american]{csquotes}
+\usepackage{scalerel}
+\usepackage{tikz} 
+\usetikzlibrary{cd} 
+\usepackage{tocloft}
+\usepackage{setspace}
+\usepackage[all]{xy}
+
+
+\usepackage[alphabetic,backrefs]{amsrefs}
+\usepackage[colorlinks,linkcolor=blue,citecolor=red]{hyperref}
+
+% DeclareMathOperator
+\DeclareMathOperator{\age}{age}
+\DeclareMathOperator{\aut}{Aut}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\bl}{Bl}
+\DeclareMathOperator{\cacl}{CaCl}
+\DeclareMathOperator{\cadiv}{CaDiv}
+\DeclareMathOperator{\caprinc}{CaPrinc}
+\DeclareMathOperator{\cl}{Cl}
+\DeclareMathOperator{\clo}{clo}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\coim}{Coim}
+\DeclareMathOperator{\coimage}{coim}
+\DeclareMathOperator{\cok}{Coker}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\crit}{Crit}
+\let \d \relax
+\DeclareMathOperator{\d}{D}
+\DeclareMathOperator{\depth}{depth}
+\DeclareMathOperator{\discrep}{discrep}
+\let \div \relax
+\DeclareMathOperator{\div}{Div}
+\let \dot \relax
+\DeclareMathOperator{\dot}{.}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\eq}{Eq}
+\DeclareMathOperator{\ex}{Ex}
+\DeclareMathOperator{\ext}{Ext}
+\DeclareMathOperator{\fil}{Fil}
+\DeclareMathOperator{\Frac}{Frac}
+\DeclareMathOperator{\gr}{Gr}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\h}{H}
+\DeclareMathOperator{\hess}{Hess}
+\let \hom \relax
+\DeclareMathOperator{\hom}{Hom}
+\DeclareMathOperator{\Ht}{ht} 
+\let \im \relax
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\image}{im}
+\DeclareMathOperator{\ind}{ind}
+\let \ker \relax
+\DeclareMathOperator{\ker}{Ker}
+\DeclareMathOperator{\kernel}{ker}
+\DeclareMathOperator{\length}{length}
+\DeclareMathOperator{\lin}{Lin}
+\DeclareMathOperator{\minspec}{mSpec}
+\DeclareMathOperator{\mspec}{dinition}
+\DeclareMathOperator{\mor}{Mor}
+\DeclareMathOperator{\mult}{mult}
+\let \ne \relax
+\DeclareMathOperator{\ne}{NE}
+\DeclareMathOperator{\nilrad}{Nilrad}
+\DeclareMathOperator{\ns}{NS}
+\DeclareMathOperator{\ob}{Ob}
+\DeclareMathOperator{\pic}{Pic}
+\DeclareMathOperator{\princ}{Princ}
+\DeclareMathOperator{\proj}{Proj}
+\let \rad \relax
+\DeclareMathOperator {\rad}{rad}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\spec}{Spec}
+\DeclareMathOperator{\stab}{Stab}
+\let \sl \relax 
+\DeclareMathOperator{\sl}{SL}
+\DeclareMathOperator{\so}{SO}
+\let \sp \relax
+\DeclareMathOperator{\sp}{Sp}
+\DeclareMathOperator{\su}{SU}
+\DeclareMathOperator{\supp}{Supp}
+\DeclareMathOperator{\tor}{Tor}
+\DeclareMathOperator{\tot}{Tot}
+\let \u \relax
+\DeclareMathOperator{\u}{U}
+
+
+%fonts
+\newcommand {\bb}{\mathbb}
+\renewcommand {\cal}{\mathcal}
+\newcommand{\ecal}{\mathscr}
+\renewcommand {\epsilon}{\varepsilon}
+\newcommand {\fr}{\mathfrak}
+\renewcommand{\scr}{\mathscr}
+% parentheses
+\newcommand {\bra}[1]{\langle{#1}\rangle}
+\renewcommand {\l}{\left}
+\newcommand {\lb}{\langle}
+\renewcommand {\r}{\right}
+\newcommand {\rb}{\rangle}
+
+% arrows/symbols
+\newcommand*{\DashedArrow}[1][]{\mathbin{\tikz [baseline=-0.25ex,-latex, dashed,#1] \draw [#1] (0pt,0.5ex) -- (1.3em,0.5ex);}}
+\newcommand {\ratmap}{\DashedArrow[->,densely dashed    ]} 
+\newcommand {\dsum}{\bigoplus}
+\newcommand {\emp}{\emptyset}
+\newcommand {\inj}{\hookrightarrow}
+\newcommand {\inv}{^{-1}}
+\newcommand {\iso}{\cong}
+\newcommand {\isom}{\cong}
+\newcommand {\nsub}{\mathrel{\unlhd}} 
+\newcommand {\oto}{\overset{1:1}{\longleftrightarrow}}
+\newcommand {\surj}{\twoheadrightarrow}
+\newcommand {\tens}{\otimes}
+
+% commands
+\let \choose \relax
+\newcommand{\choose}[2]{\genfrac{(}{)}{0pt}{}{#1}{#2}}
+\newcommand {\ovl}{\overline}
+\newcommand {\ovs}{\overset}
+\newcommand {\udl}{\underline}
+
+% categories/ other words
+\newcommand {\ab}{\mathsf{Ab}}
+\newcommand{\affalg}{\mathsf{AffAlg}}
+\newcommand{\affvar}{\mathsf{AffVar}}
+\newcommand {\alg}{{\mathsf{Alg}}}
+\newcommand {\algset}{{\mathsf{AlgSet}}}
+\newcommand {\an}{{\mathsf{an}}}
+\newcommand{\ann}{\mathsf{ann}}
+\newcommand{\ass}{\mathsf{ass}}
+\newcommand {\calg}{\mathsf{CAlg}}
+\newcommand{\cat}{\mathsf{Cat}}
+\newcommand {\colim}{\varinjlim}
+\newcommand{\cont}{\mathsf{cont}}
+\newcommand{\dd}{\mathsf{DD}}
+\newcommand {\ev}{\mathsf{ev}}
+\newcommand {\func}{\mathsf{ Func}} 
+\newcommand{\fm}{\mathsf{fm}}
+\newcommand {\gl} {{\rm GL}} 
+\newcommand{\grp}{\mathsf{Grp}}
+\newcommand{\grpd}{\mathsf{Grpd}}
+\newcommand {\hol}{\mathsf{hol}}
+\newcommand {\id}{{\rm id}}
+\newcommand {\irr}{\mathsf{irr}}
+\newcommand {\limit}{\varprojlim}
+\newcommand {\mfd}{\mathsf{Mfd}}
+\let \mod \relax
+\newcommand {\mod}{\mathsf{Mod}}
+\newcommand {\op}{\mathsf{op}}
+\newcommand {\pmfd}{\mathsf{PMfd}}
+\newcommand {\psh}{\mathsf{PSh}}
+\newcommand {\pshv}{\mathsf{PShv}}
+\newcommand{\qcoh}{\mathsf{QCoh}}
+\newcommand {\res}{\mathsf{res}}
+\newcommand {\ring}{\mathsf{Ring}}
+\newcommand {\sch}{\mathsf{Sch}}
+\newcommand {\set}{\mathsf{ Set}} 
+\newcommand {\sh}{\mathsf{Sh}} 
+\newcommand {\shv}{\mathsf{Shv}}
+\newcommand {\sset}{\mathsf{sSet}}
+\newcommand{\stk}{\mathsf{Stk}}
+\let \top \relax
+\newcommand {\top}{\mathsf{Top}} 
+\newcommand {\tors}{\mathsf{tors}} 
+\renewcommand {\vec}{\mathsf{Vec}}
+
+%ancient commands
+\newcommand{\rar}{\to}
+\newcommand{\integ}{\bb Z}
+\newcommand{\modc}[1]{\mod_{#1}}
+\newcommand{\nneg}{\bb Z_{>\geq 0}}
+\newcommand{\aand}{\and}
+\newcommand{\oor}{\text{ or }}
+\newcommand{\natu}{\bb N}
+\newcommand{\nat}{\bb N}
+\newcommand{\rat}{\bb Q}
+\newcommand{\rin}{\ring}
+\newcommand{\ideal}{\trianglelefteq}
+\newcommand{\ke}{\ker}
+\newcommand{\ie}{\text{ i.e. }}
+\newcommand{\st}{\text{ s.t. }}
+\newcommand{\torsion}{\tors}
+\newcommand{\p}{\fr p}
+\renewcommand{\q}{\fr q}
+\newcommand{\m}{\fr m}
+\newcommand{\radi}{\rad}
+\newcommand{\Rar}{\Rightarrow}
+\newcommand{\Lar}{\Leftarrow}
+\newcommand{\het}{\Ht}
+
+% xy-pic 
+\def\objectstyle{\displaystyle}
+\newcommand{\pushoutcorner}[1][dr]{\save*!/#1+1.2pc/#1:(1,-1)@^{|-}\restore}
+\newcommand{\pullbackcorner}[1][dr]{\save*!/#1-1.2pc/#1:(-1,1)@^{|-}\restore}
+\newcommand{\injar}{\ar@{^(->}} 
+\newcommand{\prarrow}[2]{\ar@<0.5ex>[r]^-{#1} \ar@<-0.5ex>[r]_-{#2}}
+\newcommand{\plarrow}[2]{\ar@<0.5ex>[l]^-{#1} \ar@<-0.5ex>[l]_-{#2}}
+\newcommand{\pdarrow}[2]{\ar@<0.5ex>[d]^-{#1} \ar@<-0.5ex>[d]_-{#2}}
+\newcommand{\puarrow}[2]{\ar@<0.5ex>[u]^-{#1} \ar@<-0.5ex>[u]_-{#2}}
+
+% enumerate
+\renewcommand{\labelenumi}{{\rm (\roman{enumi})}}
+\renewcommand{\labelenumii}{{\rm (\alph{enumii})}}
+\renewcommand{\labelenumiii}{{\rm (\arabic{enumiii})}}
+
+% newtheorem
+\theoremstyle{plain}
+\newtheorem{theorems}{Theorem}[section] % change the numbering 
+\newtheorem{claims}{Claim}[theorems]
+\newtheorem{conjectures}[theorems]{Conjecture}
+\newtheorem{corollaries}[theorems]{Corollary}
+\newtheorem{lemmas}[theorems]{Lemma} 
+\newtheorem{prop}[theorems]{Proposition}
+\newtheorem{sublemma}{Lemma}[theorems]
+%enumerate
+\newtheorem{penmdef}[claims]{Definition} 
+
+
+\theoremstyle{definition}
+\newtheorem{constructions}[theorems]{Construction}
+\newtheorem{definitions}[theorems]{Definition} 
+\newtheorem{examples}[theorems]{Example}     
+\newtheorem{notation}[theorems]{Notation}         
+\newtheorem{prob}[theorems]{Problem}
+\newtheorem{question}[theorems]{Question}
+\newtheorem{obs}[theorems]{Observation}
+%enumerate
+\newtheorem{penmlem}[claims]{Lemma}
+\newtheorem{penmthm}[claims]{Theorem}
+\newtheorem{penmcor}[claims]{Corollary}
+
+\theoremstyle{remark}
+\newtheorem{remarks}[theorems]{Remark}
+\newtheorem{xca}[theorems]{Exercise}
+%enmerate
+\newtheorem{penmeg}[claims]{Example} 
+\newtheorem{penmrem}[claims]{Remark} 
+
+
+%indented
+\makeatletter
+\newtheoremstyle{indented}
+  {3pt}% space before
+  {3pt}% space after
+  {\addtolength{\@totalleftmargin}{3.5em}
+   \addtolength{\linewidth}{-3.5em}
+   \parshape 1 3.5em \linewidth}% body font
+  {}% indent
+  {\bfseries}% header font
+  {.}% punctuation
+  {.5em}% after theorem header
+  {}% header specification (empty for default)
+\makeatother
+
+\theoremstyle{indented}
+\newtheorem{pinddef}[claims]{Definition} 
+\newtheorem{pindlem}[claims]{Lemma}
+\newtheorem{pindthm}[claims]{Theorem}
+\newtheorem{pindcor}[claims]{Corollary}
+\newtheorem{pindeg}[claims]{Example} 
+\newtheorem{pindrem}[claims]{Remark} 
+
+
+
+% puts \diamondsuit at the end.
+\newenvironment{theorem}
+{\renewcommand{\qedsymbol}{$\hrectangleblack$}
+	\pushQED{\qed}\begin{theorems}}
+	{\popQED\end{theorems}}
+
+\newenvironment{claim}
+{\renewcommand{\qedsymbol}{$\hrectangleblack$}
+	\pushQED{\qed}\begin{claims}}
+	{\popQED\end{claims}}
+
+\newenvironment{conjecture}
+{\renewcommand{\qedsymbol}{$\hrectangleblack$}
+	\pushQED{\qed}\begin{conjectures}}
+	{\popQED\end{conjectures}}
+
+\newenvironment{corollary}
+{\renewcommand{\qedsymbol}{$\hrectangleblack$}
+	\pushQED{\qed}\begin{corollaries}}
+	{\popQED\end{corollaries}}
+
+\newenvironment{definition}
+{\renewcommand{\qedsymbol}{$\hrectangleblack$}
+	\pushQED{\qed}\begin{definitions}}
+	{\popQED\end{definitions}}
+
+\newenvironment{lemma}
+{\renewcommand{\qedsymbol}{$\hrectangleblack$}
+	\pushQED{\qed}\begin{lemmas}}
+	{\popQED\end{lemmas}}
+
+\newenvironment{remark}
+{\renewcommand{\qedsymbol}{$\hrectangleblack$}
+	\pushQED{\qed}\begin{remarks}}
+	{\popQED\end{remarks}}
+	
+\newenvironment{example}
+{\renewcommand{\qedsymbol}{$\hrectangleblack$}
+	\pushQED{\qed}\begin{examples}}
+	{\popQED\end{examples}}
+
+\newenvironment{construction}
+{\renewcommand{\qedsymbol}{$\hrectangleblack$}
+	\pushQED{\qed}\begin{constructions}}
+	{\popQED\end{constructions}} 
+
+\renewcommand{\qedsymbol}{$\hrectangle$}
+
+%indented claims
+
+\newenvironment{inddef}
+{\renewcommand{\qedsymbol}{$\mdsmblksquare$}
+	\pushQED{\qed}\begin{pinddef}}
+	{\popQED\end{pinddef}}
+	
+\newenvironment{indlem}
+{\renewcommand{\qedsymbol}{$\mdsmblksquare$}
+	\pushQED{\qed} \begin{pindlem}}
+	{\popQED\end{pindlem}}
+	
+\newenvironment{indthm}
+{\renewcommand{\qedsymbol}{$\mdsmblksquare$}
+	\pushQED{\qed}\begin{pindthm}}
+	{\popQED\end{pindthm}}
+
+\newenvironment{indcor}
+{\renewcommand{\qedsymbol}{$\mdsmblksquare$}
+	\pushQED{\qed}\begin{pindcor}}
+	{\popQED\end{pindcor}}
+
+\newenvironment{indeg}
+{\renewcommand{\qedsymbol}{$\mdsmblksquare$}
+	\pushQED{\qed}\begin{pindeg}}
+	{\popQED\end{pindeg}} 
+	
+\newenvironment{indproof}
+{\begin{adjustwidth}{1.2cm}{} \begin{proof}  \renewcommand{\qedsymbol}{$\mdsmwhtsquare $}}
+	{\end{proof}\end{adjustwidth}} 
+
+\newenvironment{indrem}
+{\renewcommand{\qedsymbol}{$\mdsmblksquare$}
+	\pushQED{\qed}  \begin{pindrem}}
+	{\popQED\end{pindrem} } 
+	
+%enumerate claims
+\newenvironment{enmdef}
+{\renewcommand{\qedsymbol}{$\mdsmblksquare$}
+	\pushQED{\qed}\begin{penmdef}}
+	{\popQED\end{penmdef}}
+	
+\newenvironment{enmlem}
+{\renewcommand{\qedsymbol}{$\mdsmblksquare$}
+	\pushQED{\qed} \begin{penmlem}}
+	{\popQED\end{penmlem}}
+	
+\newenvironment{enmthm}
+{\renewcommand{\qedsymbol}{$\mdsmblksquare$}
+	\pushQED{\qed}\begin{penmthm}}
+	{\popQED\end{penmthm}}
+
+\newenvironment{enmcor}
+{\renewcommand{\qedsymbol}{$\mdsmblksquare$}
+	\pushQED{\qed}\begin{penmcor}}
+	{\popQED\end{penmcor}}
+
+\newenvironment{enmeg}
+{\renewcommand{\qedsymbol}{$\mdsmblksquare$}
+	\pushQED{\qed}\begin{penmeg}}
+	{\popQED\end{penmeg}} 
+	
+\newenvironment{enmproof}
+{\begin{proof}  \renewcommand{\qedsymbol}{$\mdsmwhtsquare$}}
+	{\end{proof}} 
+
+\newenvironment{enmrem}
+{\renewcommand{\qedsymbol}{$\mdsmblksquare$}
+	\pushQED{\qed}  \begin{pindrem}}
+	{\popQED\end{pindrem} } 
+	
+\MakeOuterQuote{"}
+
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyhead[R]{\thepage} 
